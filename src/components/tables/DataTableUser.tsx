@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { User } from "../../api/types/user";
 import { fetchUsers, updateProfile } from "../../api/services/userService";
-import { formatHari } from "../../utils/dateFormatter";
 import DataTable from "./ReusableTables/BasicTableOne";
 import { ColumnConfig } from "./ReusableTables/BasicTableOne";
 import { useNavigate } from "react-router";
@@ -75,44 +74,13 @@ const UserTable: React.FC = () => {
       className: "max-w-[250px] truncate",
     },
     {
+      header: "Email",
+      accessor: "email",
+      className: "max-w-[250px] truncate",
+    },
+    {
       header: "Role",
       accessor: "role",
-      className: "max-w-[250px] truncate",
-    },
-    {
-      header: "Status",
-      accessor: "status",
-    },
-    {
-      header: "Nomor NIK",
-      accessor: "nomor_nik",
-    },
-    {
-      header: "Nomor KK",
-      accessor: "nomor_kk",
-    },
-    {
-      header: "Jenis Kelamin",
-      accessor: "jenis_kelamin",
-      className: "max-w-[250px] truncate",
-    },
-    {
-      header: "Tempat Lahir",
-      accessor: "tempat_lahir",
-    },
-    {
-      header: "Tanggal Lahir",
-      accessor: "tanggal_lahir",
-      className: "max-w-[250px] truncate",
-      render: (value: string) => formatHari(value),
-    },
-    {
-      header: "Pekerjaan",
-      accessor: "pekerjaan",
-    },
-    {
-      header: "Alamat KTP",
-      accessor: "alamat_ktp",
       className: "max-w-[250px] truncate",
     },
     {
