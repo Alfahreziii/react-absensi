@@ -159,7 +159,7 @@ const LogInOutTable: React.FC = () => {
             </h4>
 
             {error && (
-              <Alert variant="error" title="Error Message" message={error} />
+              <Alert variant="error" title="Error Messages" message={error} />
             )}
 
             {message && (
